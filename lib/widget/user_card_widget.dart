@@ -107,7 +107,7 @@ class UserCardWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              '${user.name}, ${user.age}',
+              '${user.name}',
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
@@ -121,7 +121,7 @@ class UserCardWidget extends StatelessWidget {
             ),
             SizedBox(height: 4),
             Text(
-              '${user.mutualFriends} Mutual Friends',
+              'Are you an ogre? ${user.ogre}',
               style: TextStyle(color: Colors.white),
             )
           ],
