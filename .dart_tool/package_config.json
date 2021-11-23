@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "async",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.1",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -15,7 +15,7 @@
     },
     {
       "name": "characters",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.2.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -38,14 +38,8 @@
       "languageVersion": "2.12"
     },
     {
-      "name": "crypto",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
-    },
-    {
       "name": "cupertino_icons",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.1",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -58,6 +52,12 @@
     {
       "name": "flutter",
       "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/packages/flutter",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_lints",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_lints-1.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -75,19 +75,19 @@
     },
     {
       "name": "font_awesome_flutter",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.10.0",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.2.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
     },
     {
-      "name": "hive",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/hive-2.0.4",
+      "name": "lints",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/lints-1.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "matcher",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.10",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/matcher-0.12.11",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -99,9 +99,9 @@
     },
     {
       "name": "nested",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/nested-1.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.2"
+      "languageVersion": "2.12"
     },
     {
       "name": "path",
@@ -111,9 +111,9 @@
     },
     {
       "name": "provider",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/provider-4.3.2+2",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/provider-5.0.0",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.12"
     },
     {
       "name": "sky_engine",
@@ -159,7 +159,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.2",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -171,18 +171,18 @@
     },
     {
       "name": "vector_math",
-      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.0",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.1.1",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.14"
     },
     {
       "name": "ratr_dating",
       "rootUri": "../",
       "packageUri": "lib/",
-      "languageVersion": "2.7"
+      "languageVersion": "2.15"
     }
   ],
-  "generated": "2021-11-23T06:55:55.950822Z",
+  "generated": "2021-11-23T08:26:33.269194Z",
   "generator": "pub",
-  "generatorVersion": "2.14.4"
+  "generatorVersion": "2.15.0-268.18.beta"
 }

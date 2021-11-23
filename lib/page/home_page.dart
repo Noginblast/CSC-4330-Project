@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:ratr_dating/model/user_lib.dart';
 import 'package:ratr_dating/model/user.dart';
+import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
@@ -12,18 +13,22 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  List<User> get users => allUsers;
+// ignore: must_be_immutable
+class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
+  final List<User> users = dummyUsers;
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: buildAppBar(),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(100),
+          child: Container(color: Colors.red),
+        ),
         body: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(
             children: [
               users.isEmpty
-                  ? Text('No more users')
+                  ? const Text('No more users')
                   : Stack(children: users.map(buildUser).toList()),
               Expanded(child: Container()),
               BottomButtonsWidget()
@@ -36,12 +41,12 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
-        actions: [
+        actions: const [
           Icon(Icons.chat, color: Colors.pink),
           SizedBox(width: 16),
         ],
-        leading: Icon(Icons.person, color: Colors.pink),
-        title: FaIcon(FontAwesomeIcons.fire, color: Colors.pink),
+        leading: const Icon(Icons.person, color: Colors.pink),
+        title: const FaIcon(FontAwesomeIcons.fire, color: Colors.pink),
       );
 
   Widget buildUser(User user) {
@@ -65,7 +70,10 @@ class _HomePageState extends State<HomePage> {
         provider.resetPosition();
       },
       child: Draggable(
-        child: UserCardWidget(user: user, isUserInFocus: isUserInFocus),
+        child: UserCardWidget(
+          user: user,
+          isUserInFocus: isUserInFocus,
+        ),
         feedback: Material(
           type: MaterialType.transparency,
           child: UserCardWidget(user: user, isUserInFocus: isUserInFocus),
@@ -77,7 +85,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void onDragEnd(DraggableDetails details, User user) {
-    final minimumDrag = 100;
+    const minimumDrag = 100;
     if (details.offset.dx > minimumDrag) {
       user.isSwipedOff = true;
     } else if (details.offset.dx < -minimumDrag) {
@@ -85,5 +93,42 @@ class _HomePageState extends State<HomePage> {
     }
 
     setState(() => users.remove(user));
+  }
+
+  @override
+  Element createElement() {
+    // TODO: implement createElement
+    throw UnimplementedError();
+  }
+
+  @override
+  List<DiagnosticsNode> debugDescribeChildren() {
+    // TODO: implement debugDescribeChildren
+    throw UnimplementedError();
+  }
+
+  @override
+  // TODO: implement key
+  Key? get key => throw UnimplementedError();
+
+  @override
+  // TODO: implement preferredSize
+  Size get preferredSize => throw UnimplementedError();
+
+  @override
+  String toStringDeep(
+      {String prefixLineOne = '',
+      String? prefixOtherLines,
+      DiagnosticLevel minLevel = DiagnosticLevel.debug}) {
+    // TODO: implement toStringDeep
+    throw UnimplementedError();
+  }
+
+  @override
+  String toStringShallow(
+      {String joiner = ', ',
+      DiagnosticLevel minLevel = DiagnosticLevel.debug}) {
+    // TODO: implement toStringShallow
+    throw UnimplementedError();
   }
 }

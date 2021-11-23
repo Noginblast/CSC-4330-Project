@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-List<User> allUsers;
+late List<User> allUsers;
 
 class User {
   final String name;
@@ -14,13 +14,13 @@ class User {
   bool isSwipedOff;
 
   User({
-    @required this.designation,
-    @required this.name,
-    @required this.imgUrl,
-    @required this.location,
-    @required this.bio,
-    @required this.ogre,
-    @required this.ratingValue,
+    required this.designation,
+    required this.name,
+    required this.imgUrl,
+    required this.location,
+    required this.bio,
+    required this.ogre,
+    required this.ratingValue,
     this.isLiked = false,
     this.isSwipedOff = false,
   });

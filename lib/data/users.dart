@@ -1,5 +1,4 @@
-/*import 'package:ratr_dating/model/user.dart';
-//import 'package:ratr_dating/model/rating.dart';
+import 'package:ratr_dating/model/user.dart';
 
 final dummyUsers = [
   User(
@@ -34,4 +33,3 @@ final dummyUsers = [
     ratingValue: 4,
   ),
 ];
-*/

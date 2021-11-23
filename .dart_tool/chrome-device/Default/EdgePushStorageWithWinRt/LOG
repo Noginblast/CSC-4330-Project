@@ -1,3 +1,2 @@
-2021/11/23-01:23:11.018 1880 Reusing MANIFEST C:\Users\DUMPST~1\AppData\Local\Temp\flutter_tools.8edc7120\flutter_tools_chrome_device.e515ac61\Default\EdgePushStorageWithWinRt/MANIFEST-000001
-2021/11/23-01:23:11.018 1880 Recovering log #3
-2021/11/23-01:23:11.018 1880 Reusing old log C:\Users\DUMPST~1\AppData\Local\Temp\flutter_tools.8edc7120\flutter_tools_chrome_device.e515ac61\Default\EdgePushStorageWithWinRt/000003.log 
+2021/11/23-02:50:39.433 4094 Creating DB C:\Users\DUMPST~1\AppData\Local\Temp\flutter_tools.d37c280a\flutter_tools_chrome_device.7a91b2b3\Default\EdgePushStorageWithWinRt since it was missing.
+2021/11/23-02:50:40.322 4094 Reusing MANIFEST C:\Users\DUMPST~1\AppData\Local\Temp\flutter_tools.d37c280a\flutter_tools_chrome_device.7a91b2b3\Default\EdgePushStorageWithWinRt/MANIFEST-000001
