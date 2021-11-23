@@ -15,6 +15,8 @@ dependencies:
 
   # icons
   font_awesome_flutter: ^8.10.0
+  smooth_star_rating: ^1.1.1
+  flutter_rating_bar: ^4.0.0
 
 dev_dependencies:
   flutter_test:
