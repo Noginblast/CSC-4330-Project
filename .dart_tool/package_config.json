@@ -56,6 +56,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_rating_bar",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_rating_bar-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_test",
       "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/packages/flutter_test",
       "packageUri": "lib/",
@@ -102,6 +108,12 @@
       "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "smooth_star_rating",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/smooth_star_rating-1.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
     },
     {
       "name": "source_span",
@@ -158,7 +170,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-11-17T05:33:38.619531Z",
+  "generated": "2021-11-23T04:52:26.876672Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }
