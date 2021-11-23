@@ -1,7 +1,7 @@
 import 'package:ratr_dating/model/user.dart';
 
 class PrincessFiona {
-  User fiona = new User(
+  late User fiona = new User(
           name: 'Fiona',
           designation: 'A fiery redhead',
           imgUrl: 'assets/user3.jpg',
@@ -18,10 +18,10 @@ class PrincessFiona {
       location,
       ratingValue;
 
-  List<User> allUsers;
+  late List<User> allUsers;
 
   void createNewUser(User fiona) {
-    allUsers.add(new User(
+    allUsers.add(User(
         name: 'Fiona',
         designation: 'A fiery redhead',
         imgUrl: 'assets/user3.jpg',

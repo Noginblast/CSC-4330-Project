@@ -7,7 +7,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  double ratingValue;
+  late double ratingValue;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

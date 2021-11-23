@@ -4,7 +4,7 @@ enum SwipingDirection { left, right, none }
 
 class FeedbackPositionProvider extends ChangeNotifier {
   double _dx = 0.0;
-  SwipingDirection _swipingDirection;
+  late SwipingDirection _swipingDirection;
 
   SwipingDirection get swipingDirection => _swipingDirection;
 
