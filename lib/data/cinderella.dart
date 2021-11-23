@@ -1,0 +1,33 @@
+import 'package:ratr_dating/model/user.dart';
+
+class PrincessCinderella {
+  User cinderella = new User(
+          name: 'Cinderella',
+          designation: 'A mentally abused shut-in',
+          imgUrl: 'assets/user1.jpg',
+          bio:
+              'I like sushi and hottubing anytime! My hobbies include cooking and cleaning for my two evil sisters',
+          ogre: 'no',
+          location: 'A kingdom far, far away',
+          ratingValue: 4)
+        ..name,
+      designation,
+      bio,
+      ogre,
+      location,
+      ratingValue;
+
+  List<User> allUsers;
+
+  void createNewUser(User cinderella) {
+    allUsers.add(new User(
+        name: 'Cinderella',
+        designation: 'A mentally abused shut-in',
+        imgUrl: 'assets/user1.jpg',
+        bio:
+            'I like sushi and hottubing anytime! My hobbies include cooking and cleaning for my two evil sisters',
+        ogre: 'no',
+        location: 'A kingdom far, far away',
+        ratingValue: 4));
+  }
+}

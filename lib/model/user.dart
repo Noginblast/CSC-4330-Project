@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:ratr_dating/model/rating.dart';
+
+List<User> allUsers;
 
 class User {
   final String name;
@@ -8,7 +9,7 @@ class User {
   final String location;
   final String bio;
   final String ogre;
-  final String ratingValue;
+  final double ratingValue;
   bool isLiked;
   bool isSwipedOff;
 

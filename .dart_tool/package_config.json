@@ -38,6 +38,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "crypto",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/crypto-3.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.1",
       "packageUri": "lib/",
@@ -72,6 +78,12 @@
       "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-8.10.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
+    },
+    {
+      "name": "hive",
+      "rootUri": "file:///C:/Users/Dumpster%20Fire/Downloads/flutter/.pub-cache/hosted/pub.dartlang.org/hive-2.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "matcher",
@@ -170,7 +182,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-11-23T04:52:26.876672Z",
+  "generated": "2021-11-23T06:55:55.950822Z",
   "generator": "pub",
   "generatorVersion": "2.14.4"
 }
