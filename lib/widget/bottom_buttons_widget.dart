@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class BottomButtonsWidget extends StatelessWidget {
+  const BottomButtonsWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) => Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
+        children: const [
           CircleAvatar(
             backgroundColor: Colors.white,
             child: Icon(Icons.replay, color: Colors.yellow),
@@ -23,7 +25,7 @@ class BottomButtonsWidget extends StatelessWidget {
           ),
           CircleAvatar(
             backgroundColor: Colors.white,
-            child: Icon(Icons.flash_on, color: Colors.purple),
+            child: Icon(Icons.person, color: Colors.purple),
           ),
         ],
       );

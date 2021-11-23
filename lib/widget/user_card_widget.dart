@@ -7,6 +7,7 @@ class UserCardWidget extends StatelessWidget {
   final User user;
   final bool isUserInFocus;
 
+  // ignore: use_key_in_widget_constructors
   const UserCardWidget({
     required this.user,
     required this.isUserInFocus,
