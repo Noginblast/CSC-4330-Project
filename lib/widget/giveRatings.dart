@@ -1,9 +1,14 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
+// ignore: import_of_legacy_library_into_null_safe
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -32,6 +37,7 @@ class _MyAppState extends State<MyApp> {
           allowHalfRating: true,
           spacing: 2.0,
           onRated: (value) {
+            // ignore: avoid_print
             print("rating value -> $value");
             // print("rating value dd -> ${value.truncate()}");
           },

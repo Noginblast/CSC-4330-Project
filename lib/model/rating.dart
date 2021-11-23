@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -12,30 +14,30 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Ratr Dating'),
+          title: const Text('Ratr Dating'),
         ),
         body: Padding(
           padding: const EdgeInsets.all(25),
           child: Center(
             child: Column(
               children: [
-                Text(
+                const Text(
                   'How\'d I do?',
                   style: TextStyle(fontSize: 24),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 RatingBar(
                     initialRating: 0,
                     direction: Axis.horizontal,
                     allowHalfRating: false,
                     itemCount: 5,
                     ratingWidget: RatingWidget(
-                        full: Icon(Icons.favorite, color: Colors.pink),
-                        half: Icon(
+                        full: const Icon(Icons.favorite, color: Colors.pink),
+                        half: const Icon(
                           Icons.favorite,
                           color: Colors.pink,
                         ),
-                        empty: Icon(
+                        empty: const Icon(
                           Icons.favorite_border,
                           color: Colors.pink,
                         )),
@@ -44,18 +46,19 @@ class _HomePageState extends State<HomePage> {
                         ratingValue = value;
                       });
                     }),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Container(
                   width: 200,
                   height: 200,
-                  decoration:
-                      BoxDecoration(color: Colors.pink, shape: BoxShape.circle),
+                  decoration: const BoxDecoration(
+                      color: Colors.pink, shape: BoxShape.circle),
                   alignment: Alignment.center,
                   child: Text(
+                    // ignore: unnecessary_null_comparison
                     ratingValue != null
                         ? ratingValue.toString()
                         : 'How\'d I do?',
-                    style: TextStyle(color: Colors.white, fontSize: 30),
+                    style: const TextStyle(color: Colors.white, fontSize: 30),
                   ),
                 )
               ],

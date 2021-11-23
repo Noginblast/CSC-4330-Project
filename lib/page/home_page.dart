@@ -9,6 +9,8 @@ import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
 
 class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -21,7 +23,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
   Widget build(BuildContext context) => Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(100),
-          child: Container(color: Colors.red),
+          child: Container(color: Colors.transparent),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8),
@@ -31,7 +33,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                   ? const Text('No more users')
                   : Stack(children: users.map(buildUser).toList()),
               Expanded(child: Container()),
-              BottomButtonsWidget()
+              const BottomButtonsWidget()
             ],
           ),
         ),
@@ -39,7 +41,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
 
   Widget buildAppBar() => AppBar(
         centerTitle: true,
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.white,
         elevation: 0,
         actions: const [
           Icon(Icons.chat, color: Colors.pink),

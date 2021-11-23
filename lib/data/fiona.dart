@@ -1,7 +1,7 @@
 import 'package:ratr_dating/model/user.dart';
 
 class PrincessFiona {
-  late User fiona = new User(
+  late User fiona = User(
           name: 'Fiona',
           designation: 'A fiery redhead',
           imgUrl: 'assets/user3.jpg',
