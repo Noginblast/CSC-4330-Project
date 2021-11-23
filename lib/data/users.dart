@@ -1,5 +1,5 @@
-import 'package:ratr_dating/model/user.dart';
-import 'package:ratr_dating/model/rating.dart';
+/*import 'package:ratr_dating/model/user.dart';
+//import 'package:ratr_dating/model/rating.dart';
 
 final dummyUsers = [
   User(
@@ -11,7 +11,7 @@ final dummyUsers = [
     location:
         'A dragon-guarded castle surrounded by hot, boiling lava (but don\'t let that cool you off)',
     imgUrl: 'assets/user3.jpg',
-    ratingValue: 'model/rating.dart/value',
+    ratingValue: 5,
   ),
   User(
     name: 'Snow White',
@@ -21,6 +21,7 @@ final dummyUsers = [
     location: 'The land of fancy',
     ogre: 'no',
     imgUrl: 'assets/user2.jpg',
+    ratingValue: 3,
   ),
   User(
     name: 'Cinderella',
@@ -30,5 +31,7 @@ final dummyUsers = [
     location: 'A kingdom far, far away',
     ogre: 'no',
     imgUrl: 'assets/user1.jpg',
+    ratingValue: 4,
   ),
 ];
+*/

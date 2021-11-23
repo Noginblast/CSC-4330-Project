@@ -14,10 +14,20 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Ratr Dating',
           theme: ThemeData(
-            primarySwatch: Colors.deepOrange,
+            primarySwatch: Colors.pink,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           home: HomePage(),
         ),
       );
+  Widget chat(BuildContext context) {
+    return MaterialApp(
+      title: 'Messages',
+      theme: ThemeData(
+        primarySwatch: Colors.pink,
+      ),
+      debugShowCheckedModeBanner: false,
+      home: Container(),
+    );
+  }
 }
