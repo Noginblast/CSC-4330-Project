@@ -6,12 +6,10 @@ import 'opaque_image.dart';
 
 class ProfileView extends StatelessWidget {
   final User user;
-  final bool isUserInFocus;
 
   // ignore: use_key_in_widget_constructors
   const ProfileView({
     required this.user,
-    required this.isUserInFocus,
   });
 
   @override
@@ -55,16 +53,17 @@ class ProfileView extends StatelessWidget {
                 ),
               ),
               Positioned(
-                  right: 10,
-                  left: 10,
-                  bottom: 10,
-                  child: IconButton(
-                    padding: const EdgeInsets.only(bottom: 16, right: 8),
-                    onPressed: () {
-                      _navigateToLastScreen(context);
-                    },
-                    icon: const Icon(Icons.zoom_out, color: Colors.black),
-                  ))
+                right: 10,
+                left: 10,
+                bottom: 10,
+                child: IconButton(
+                  padding: const EdgeInsets.only(bottom: 16, right: 8),
+                  onPressed: () {
+                    _navigateToLastScreen(context);
+                  },
+                  icon: const Icon(Icons.zoom_out, color: Colors.black),
+                ),
+              )
             ],
           ),
         ],

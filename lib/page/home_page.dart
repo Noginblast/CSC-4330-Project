@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:ratr_dating/model/user_lib.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/users.dart';
+import 'package:ratr_dating/page/profile_view.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
@@ -17,7 +18,7 @@ class HomePage extends StatefulWidget {
 
 // ignore: must_be_immutable
 class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
-  final List<User> users = dummyUsers;
+  final currentUser = loggedInUser;
 
   @override
   Widget build(BuildContext context) => Scaffold(
@@ -28,12 +29,11 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
         body: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(
+            mainAxisSize: MainAxisSize.max,
             children: [
-              users.isEmpty
-                  ? const Text('No more users')
-                  : Stack(children: users.map(buildUser).toList()),
+              // ProfileView(user: loggedInUser),
               Expanded(child: Container()),
-              BottomButtonsWidget()
+              BottomButtonsWidget(),
             ],
           ),
         ),
@@ -50,54 +50,6 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
         leading: const Icon(Icons.person, color: Colors.pink),
         title: const FaIcon(FontAwesomeIcons.fire, color: Colors.pink),
       );
-
-  Widget buildUser(User user) {
-    final userIndex = users.indexOf(user);
-    final isUserInFocus = userIndex == users.length - 1;
-
-    return Listener(
-      onPointerMove: (pointerEvent) {
-        final provider =
-            Provider.of<FeedbackPositionProvider>(context, listen: false);
-        provider.updatePosition(pointerEvent.localDelta.dx);
-      },
-      onPointerCancel: (_) {
-        final provider =
-            Provider.of<FeedbackPositionProvider>(context, listen: false);
-        provider.resetPosition();
-      },
-      onPointerUp: (_) {
-        final provider =
-            Provider.of<FeedbackPositionProvider>(context, listen: false);
-        provider.resetPosition();
-      },
-      child: Draggable(
-        child: UserCardWidget(
-          user: user,
-          isUserInFocus: isUserInFocus,
-          profile_view: null,
-        ),
-        feedback: Material(
-          type: MaterialType.transparency,
-          child: UserCardWidget(user: user, isUserInFocus: isUserInFocus,
-          profile_view: null,),
-        ),
-        childWhenDragging: Container(),
-        onDragEnd: (details) => onDragEnd(details, user),
-      ),
-    );
-  }
-
-  void onDragEnd(DraggableDetails details, User user) {
-    const minimumDrag = 100;
-    if (details.offset.dx > minimumDrag) {
-      user.isSwipedOff = true;
-    } else if (details.offset.dx < -minimumDrag) {
-      user.isLiked = true;
-    }
-
-    setState(() => users.remove(user));
-  }
 
   @override
   Element createElement() {

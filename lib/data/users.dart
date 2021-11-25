@@ -33,3 +33,13 @@ final dummyUsers = [
     ratingValue: 4,
   ),
 ];
+
+final loggedInUser = User(
+  name: 'Lord Farquaad',
+  designation: 'Not the monster here',
+  bio: 'Not a king... Yet.',
+  location: 'DuLoc, the Perfect... Princedom?',
+  ogre: 'no',
+  imgUrl: 'assets/user1.jpg',
+  ratingValue: 1,
+);

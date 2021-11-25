@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class RatingPage extends StatefulWidget {
+  const RatingPage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _RatingPageState createState() => _RatingPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _RatingPageState extends State<RatingPage> {
   late double ratingValue;
   @override
   Widget build(BuildContext context) {

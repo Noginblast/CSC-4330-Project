@@ -10,11 +10,10 @@ class UserCardWidget extends StatelessWidget {
   final ProfileView? profile_view;
 
   // ignore: use_key_in_widget_constructors
-  const UserCardWidget({
-    required this.user,
-    required this.isUserInFocus, 
-    required this.profile_view
-  });
+  const UserCardWidget(
+      {required this.user,
+      required this.isUserInFocus,
+      required this.profile_view});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +57,9 @@ class UserCardWidget extends StatelessWidget {
                   buildUserInfo(user: user),
                   IconButton(
                     padding: const EdgeInsets.only(bottom: 16, right: 8),
-                    onPressed: () { _navigateToNextScreen(context); },
+                    onPressed: () {
+                      _navigateToNextScreen(context);
+                    },
                     icon: const Icon(Icons.info, color: Colors.white),
                   )
                 ],
@@ -133,8 +134,7 @@ class UserCardWidget extends StatelessWidget {
       );
 
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => ProfileView(user: user, isUserInFocus: isUserInFocus,)));
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => ProfileView(user: user)));
   }
-
 }
