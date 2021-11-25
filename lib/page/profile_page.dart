@@ -69,14 +69,14 @@ class _ProfileInfoState extends State<ProfileInfo> {
   }
 }
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class EditProfile extends StatefulWidget {
+  const EditProfile({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  _EditProfileState createState() => _EditProfileState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _EditProfileState extends State<EditProfile> {
   List<Map> pronouns = [
     {"name": "He/him/his", "isChecked": false},
     {"name": "She/her/hers", "isChecked": false},

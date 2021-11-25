@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.pink,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
+          debugShowCheckedModeBanner: false,
           home: const HomePage(),
         ),
       );
