@@ -19,3 +19,8 @@ doc/api/
 *.js_
 *.js.deps
 *.js.map
+
+# Files and directories created when running
+.flutter-plugins
+.flutter-plugins-dependencies
+build/
