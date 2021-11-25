@@ -1,4 +1,0 @@
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/example/ratr_dating/BuildConfig.java
- com.example.ratr_dating.BuildConfig
