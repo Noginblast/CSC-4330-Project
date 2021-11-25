@@ -54,10 +54,25 @@ class ProfileView extends StatelessWidget {
                   ),
                 ),
               ),
+              Positioned(
+                  right: 10,
+                  left: 10,
+                  bottom: 10,
+                  child: IconButton(
+                    padding: const EdgeInsets.only(bottom: 16, right: 8),
+                    onPressed: () {
+                      _navigateToLastScreen(context);
+                    },
+                    icon: const Icon(Icons.zoom_out, color: Colors.black),
+                  ))
             ],
           ),
         ],
       ),
     );
+  }
+
+  void _navigateToLastScreen(BuildContext context) {
+    Navigator.of(context).pop();
   }
 }
