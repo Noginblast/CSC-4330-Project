@@ -73,6 +73,15 @@
 50-->C:\Users\cadef\OneDrive\Documents\College Stuff\6th Year\S1\CSC 4330\ratr_dating\android\app\src\main\AndroidManifest.xml:29:13-44
 51            android:value="2" />
 51-->C:\Users\cadef\OneDrive\Documents\College Stuff\6th Year\S1\CSC 4330\ratr_dating\android\app\src\main\AndroidManifest.xml:30:13-30
-52    </application>
-53
-54</manifest>
+52
+53        <activity
+53-->[:url_launcher] C:\Users\cadef\OneDrive\Documents\College Stuff\6th Year\S1\CSC 4330\ratr_dating\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+54            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+54-->[:url_launcher] C:\Users\cadef\OneDrive\Documents\College Stuff\6th Year\S1\CSC 4330\ratr_dating\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+55            android:exported="false"
+55-->[:url_launcher] C:\Users\cadef\OneDrive\Documents\College Stuff\6th Year\S1\CSC 4330\ratr_dating\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+56            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+56-->[:url_launcher] C:\Users\cadef\OneDrive\Documents\College Stuff\6th Year\S1\CSC 4330\ratr_dating\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+57    </application>
+58
+59</manifest>
