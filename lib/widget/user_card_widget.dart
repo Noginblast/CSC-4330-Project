@@ -5,16 +5,15 @@ import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/page/profile_view.dart';
 
 class UserCardWidget extends StatelessWidget {
-  final User user;
+  final ratrUser user;
   final bool isUserInFocus;
   final ProfileView? profile_view;
 
   // ignore: use_key_in_widget_constructors
-  const UserCardWidget({
-    required this.user,
-    required this.isUserInFocus, 
-    required this.profile_view
-  });
+  const UserCardWidget(
+      {required this.user,
+      required this.isUserInFocus,
+      required this.profile_view});
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +57,9 @@ class UserCardWidget extends StatelessWidget {
                   buildUserInfo(user: user),
                   IconButton(
                     padding: const EdgeInsets.only(bottom: 16, right: 8),
-                    onPressed: () { _navigateToNextScreen(context); },
+                    onPressed: () {
+                      _navigateToNextScreen(context);
+                    },
                     icon: const Icon(Icons.info, color: Colors.white),
                   )
                 ],
@@ -104,7 +105,7 @@ class UserCardWidget extends StatelessWidget {
     }
   }
 
-  Widget buildUserInfo({required User user}) => Padding(
+  Widget buildUserInfo({required ratrUser user}) => Padding(
         padding: const EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,17 +125,15 @@ class UserCardWidget extends StatelessWidget {
               style: const TextStyle(color: Colors.white),
             ),
             const SizedBox(height: 4),
-            Text(
-              'Are you an ogre? ${user.ogre}',
-              style: const TextStyle(color: Colors.white),
-            )
           ],
         ),
       );
 
   void _navigateToNextScreen(BuildContext context) {
-    Navigator.of(context).push(
-        MaterialPageRoute(builder: (context) => ProfileView(user: user, isUserInFocus: isUserInFocus,)));
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => ProfileView(
+              user: user,
+              isUserInFocus: isUserInFocus,
+            )));
   }
-
 }

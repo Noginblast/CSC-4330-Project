@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:ratr_dating/model/user.dart';
 
 class ProfileInfo extends StatefulWidget {
   const ProfileInfo({Key? key}) : super(key: key);
-
   @override
   _ProfileInfoState createState() => _ProfileInfoState();
 }
@@ -55,6 +55,7 @@ class _ProfileInfoState extends State<ProfileInfo> {
                 child: ElevatedButton(
                   onPressed: () {
                     saveName();
+//                    user.name = name;
                     const snackBar = SnackBar(
                       content: Text("Updated name!"),
                     );
@@ -73,10 +74,14 @@ class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
   @override
-  _HomePageState createState() => _HomePageState();
+  HomePageState createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class Pronouns {
+  // final List pronouns[1,2,3];
+}
+
+class HomePageState extends State<HomePage> {
   List<Map> pronouns = [
     {"name": "He/him/his", "isChecked": false},
     {"name": "She/her/hers", "isChecked": false},
@@ -98,7 +103,7 @@ class _HomePageState extends State<HomePage> {
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             const Text(
-              'Select your pronouns',
+              'Please select your pronouns in the order you\'d like them to appear on your profile',
               style: TextStyle(fontSize: 24),
             ),
             const SizedBox(height: 10),

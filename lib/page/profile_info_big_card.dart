@@ -2,10 +2,16 @@ import 'package:ratr_dating/styleguide/text_style.dart';
 import 'package:flutter/material.dart';
 
 class ProfileInfoBigCard extends StatelessWidget {
-  final String firstText, secondText;
+  final String firstText, secondText, thirdText;
   final Widget icon;
 
-  const ProfileInfoBigCard({Key? key, required this.firstText, required this.secondText, required this.icon}) : super(key: key);
+  const ProfileInfoBigCard(
+      {Key? key,
+      required this.firstText,
+      required this.secondText,
+      required this.thirdText,
+      required this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

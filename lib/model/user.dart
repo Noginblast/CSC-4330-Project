@@ -1,28 +1,29 @@
-// ignore: unused_import
+// ignore_for_file: unused_import
 import 'package:flutter/cupertino.dart';
+import 'package:ratr_dating/page/profile_page.dart';
+import 'package:hive/hive.dart';
+// ignore: library_prefixes
+import 'package:path_provider/path_provider.dart' as pathProvider;
+import 'dart:io';
+part 'user.g.dart';
 
-late List<User> allUsers;
-
-class User {
+@HiveType(typeId: 1)
+class ratrUser {
+  @HiveField(0)
   final String name;
+  @HiveField(1)
+  final String pronouns;
+  @HiveField(2)
   final String designation;
+  @HiveField(3)
   final String imgUrl;
+  @HiveField(4)
   final String location;
+  @HiveField(5)
   final String bio;
-  final String ogre;
+  @HiveField(6)
   final double ratingValue;
-  bool isLiked;
-  bool isSwipedOff;
-
-  User({
-    required this.designation,
-    required this.name,
-    required this.imgUrl,
-    required this.location,
-    required this.bio,
-    required this.ogre,
-    required this.ratingValue,
-    this.isLiked = false,
-    this.isSwipedOff = false,
-  });
+  @HiveField(7)
+  ratrUser(this.name, this.pronouns, this.designation, this.imgUrl,
+      this.location, this.bio, this.ratingValue);
 }

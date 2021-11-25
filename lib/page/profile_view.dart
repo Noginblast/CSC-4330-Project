@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/page/profile_info_big_card.dart';
-
+import 'package:ratr_dating/page/profile_page.dart';
 import 'opaque_image.dart';
 
 class ProfileView extends StatelessWidget {
-  final User user;
+  final ratrUser user;
   final bool isUserInFocus;
 
   // ignore: use_key_in_widget_constructors
@@ -43,6 +43,7 @@ class ProfileView extends StatelessWidget {
                           ProfileInfoBigCard(
                             firstText: user.name,
                             secondText: user.bio,
+                            thirdText: user.designation,
                             icon: const Icon(
                               Icons.favorite,
                               color: Colors.pink,

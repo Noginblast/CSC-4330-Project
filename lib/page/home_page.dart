@@ -9,21 +9,19 @@ import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
-
   @override
   _HomePageState createState() => _HomePageState();
 }
 
 // ignore: must_be_immutable
 class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
-  final List<User> users = dummyUsers;
+  final List<ratrUser> users = dummyUsers;
 
   @override
   Widget build(BuildContext context) => Scaffold(
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(100),
-          child: Container(color: Colors.transparent),
+          child: Container(color: Colors.red),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8),
@@ -32,8 +30,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
               users.isEmpty
                   ? const Text('No more users')
                   : Stack(children: users.map(buildUser).toList()),
-              Expanded(child: Container()),
-              BottomButtonsWidget()
+                        BottomButtonsWidget(              cottomButtonsWidget()
             ],
           ),
         ),
@@ -41,7 +38,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
 
   Widget buildAppBar() => AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.wtransparent
         elevation: 0,
         actions: const [
           Icon(Icons.chat, color: Colors.pink),
@@ -75,12 +72,11 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
         child: UserCardWidget(
           user: user,
           isUserInFocus: isUserInFocus,
-          profile_view: null,
         ),
         feedback: Material(
           type: MaterialType.transparency,
-          child: UserCardWidget(user: user, isUserInFocus: isUserInFocus,
-          profile_view: null,),
+          child: UserCardWidget(user: user, isUserInFocus: isUserInFocus),
+t(user: user, isUserInFocus: isUserInFocus),
         ),
         childWhenDragging: Container(),
         onDragEnd: (details) => onDragEnd(details, user),
