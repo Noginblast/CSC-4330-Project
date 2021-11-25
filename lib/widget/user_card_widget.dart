@@ -2,15 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
+import 'package:ratr_dating/page/profile_view.dart';
 
 class UserCardWidget extends StatelessWidget {
   final User user;
   final bool isUserInFocus;
+  final ProfileView? profile_view;
 
   // ignore: use_key_in_widget_constructors
   const UserCardWidget({
     required this.user,
-    required this.isUserInFocus,
+    required this.isUserInFocus, 
+    required this.profile_view
   });
 
   @override
@@ -53,9 +56,10 @@ class UserCardWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   buildUserInfo(user: user),
-                  const Padding(
-                    padding: EdgeInsets.only(bottom: 16, right: 8),
-                    child: Icon(Icons.info, color: Colors.white),
+                  IconButton(
+                    padding: const EdgeInsets.only(bottom: 16, right: 8),
+                    onPressed: () { _navigateToNextScreen(context); },
+                    icon: const Icon(Icons.info, color: Colors.white),
                   )
                 ],
               ),
@@ -127,4 +131,10 @@ class UserCardWidget extends StatelessWidget {
           ],
         ),
       );
+
+  void _navigateToNextScreen(BuildContext context) {
+    Navigator.of(context).push(
+        MaterialPageRoute(builder: (context) => ProfileView(user: user, isUserInFocus: isUserInFocus,)));
+  }
+
 }

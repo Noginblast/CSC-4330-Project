@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                   ? const Text('No more users')
                   : Stack(children: users.map(buildUser).toList()),
               Expanded(child: Container()),
-              const BottomButtonsWidget()
+              BottomButtonsWidget()
             ],
           ),
         ),
@@ -75,10 +75,12 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
         child: UserCardWidget(
           user: user,
           isUserInFocus: isUserInFocus,
+          profile_view: null,
         ),
         feedback: Material(
           type: MaterialType.transparency,
-          child: UserCardWidget(user: user, isUserInFocus: isUserInFocus),
+          child: UserCardWidget(user: user, isUserInFocus: isUserInFocus,
+          profile_view: null,),
         ),
         childWhenDragging: Container(),
         onDragEnd: (details) => onDragEnd(details, user),
