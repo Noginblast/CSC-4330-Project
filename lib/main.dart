@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Ratr Dating',
           theme: ThemeData(
-            primarySwatch: Colors.pink,
+            primarySwatch: Colors.deepOrange,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           debugShowCheckedModeBanner: false,
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Messages',
       theme: ThemeData(
-        primarySwatch: Colors.pink,
+        primarySwatch: Colors.deepOrange,
       ),
       debugShowCheckedModeBanner: false,
       home: Container(),

@@ -4,6 +4,7 @@ import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/page/home_page.dart';
 import 'package:ratr_dating/page/profile_view.dart';
 import 'package:ratr_dating/page/chat_page.dart';
+import 'package:ratr_dating/page/chat_menu.dart';
 import 'package:ratr_dating/page/swipe_page.dart';
 
 class BottomButtonsWidget extends StatelessWidget {
@@ -58,6 +59,6 @@ class BottomButtonsWidget extends StatelessWidget {
 
   void _gotoChat(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => ChatScreen(user: loggedInUser)));
+        builder: (context) => ChatMenu()));//ChatScreen(user: loggedInUser)));
   }
 }
