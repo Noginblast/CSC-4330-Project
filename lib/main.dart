@@ -4,6 +4,7 @@ import 'package:ratr_dating/page/chat_page.dart';
 import 'package:ratr_dating/page/home_page.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/data/cinderella.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           title: 'Ratr Dating',
           theme: ThemeData(
-            primarySwatch: Colors.deepOrange,
+            primarySwatch: Palette.kToDark,
             visualDensity: VisualDensity.adaptivePlatformDensity,
           ),
           debugShowCheckedModeBanner: false,
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Messages',
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Palette.kToDark,
       ),
       debugShowCheckedModeBanner: false,
       home: Container(),

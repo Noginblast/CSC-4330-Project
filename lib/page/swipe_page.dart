@@ -7,6 +7,7 @@ import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 class SwipePage extends StatefulWidget {
   const SwipePage({Key? key}) : super(key: key);
@@ -21,9 +22,10 @@ class _SwipePageState extends State<SwipePage> implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Palette.kToDark[100],
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(100),
-          child: Container(color: Colors.transparent),
+          preferredSize: const Size.fromHeight(75),
+          child: Container(),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8),
