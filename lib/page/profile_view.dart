@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/page/profile_info_big_card.dart';
+import 'package:ratr_dating/styleguide/colors.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 import 'opaque_image.dart';
 
@@ -15,7 +17,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffb6326b),
+      appBar: AppBar(),
       body: Stack(
         children: <Widget>[
           Column(
@@ -34,7 +36,7 @@ class ProfileView extends StatelessWidget {
               Expanded(
                 flex: 5,
                 child: Container(
-                  color: Colors.white,
+                  color: Palette.kToDark[300],
                   child: Table(
                     children: [
                       TableRow(
@@ -43,8 +45,8 @@ class ProfileView extends StatelessWidget {
                             firstText: user.name,
                             secondText: user.bio,
                             icon: const Icon(
-                              Icons.favorite,
-                              color: Colors.pink,
+                              Icons.description,
+                              color: Colors.purple,
                             ),
                           ),
                         ],
@@ -53,26 +55,10 @@ class ProfileView extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
-                right: 10,
-                left: 10,
-                bottom: 10,
-                child: IconButton(
-                  padding: const EdgeInsets.only(bottom: 16, right: 8),
-                  onPressed: () {
-                    _navigateToLastScreen(context);
-                  },
-                  icon: const Icon(Icons.zoom_out, color: Colors.black),
-                ),
-              )
             ],
           ),
         ],
       ),
     );
-  }
-
-  void _navigateToLastScreen(BuildContext context) {
-    Navigator.of(context).pop();
   }
 }
