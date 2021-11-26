@@ -18,46 +18,63 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Stack(
-        children: <Widget>[
-          Column(
-            children: <Widget>[
-              Expanded(
-                flex: 4,
-                child: Stack(
-                  children: <Widget>[
-                    OpaqueImage(
-                      imageUrl: AssetImage(user.imgUrl),
-                      user: user,
+      body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: 900,
+              child: Column(
+                children: <Widget>[
+                  Expanded(
+                    flex: 4,
+                    child: Stack(
+                      children: <Widget>[
+                        OpaqueImage(
+                          imageUrl: AssetImage(user.imgUrl),
+                          user: user,
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-              ),
-              Expanded(
-                flex: 5,
-                child: Container(
-                  color: Palette.kToDark[300],
-                  child: Table(
-                    children: [
-                      TableRow(
+                  ),
+                  Expanded(
+                    flex: 5,
+                    child: Container(
+                      color: Palette.kToDark[300],
+                      child: Table(
                         children: [
-                          ProfileInfoBigCard(
-                            firstText: user.name,
-                            secondText: user.bio,
-                            icon: const Icon(
-                              Icons.description,
-                              color: Colors.purple,
-                            ),
+                          TableRow(
+                            children: [
+                              ProfileInfoBigCard(
+                                firstText: user.name,
+                                secondText: user.bio,
+                                icon: const Icon(
+                                  Icons.description,
+                                  color: Colors.purple,
+                                ),
+                              ),
+                            ],
                           ),
+                          TableRow(
+                              children: [
+                                ProfileInfoBigCard(
+                                  firstText: user.name,
+                                  secondText: user.bio,
+                                  icon: const Icon(
+                                    Icons.description,
+                                    color: Colors.purple,
+                                  ),
+                                ),
+                              ]
+                          )
                         ],
                       ),
-                    ],
+                    ),
                   ),
-                ),
+                ],
               ),
-            ],
-          ),
-        ],
+            )
+          ],
+        ),
       ),
     );
   }
