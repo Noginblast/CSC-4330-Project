@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
+import 'package:ratr_dating/data/ratings.dart';
 import 'package:ratr_dating/model/user_lib.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/users.dart';
@@ -68,16 +69,14 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                                   ),
                                 ],
                               ),
-                              TableRow(children: [
-                                ProfileInfoBigCard(
-                                  firstText: loggedInUser.name,
-                                  secondText: loggedInUser.bio,
-                                  icon: const Icon(
-                                    Icons.description,
-                                    color: Colors.purple,
+                              TableRow(
+                                children: [
+                                  RatingDisplay(
+                                    ratingType: 'Conversation',
+                                    ratings: loggedInUser.ratings,
                                   ),
-                                ),
-                              ])
+                                ],
+                              ),
                             ],
                           ),
                         ),

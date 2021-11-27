@@ -1,5 +1,6 @@
 // ignore: unused_import
 import 'package:flutter/cupertino.dart';
+import 'package:ratr_dating/data/ratings.dart';
 
 late List<User> allUsers;
 
@@ -11,6 +12,7 @@ class User {
   final String bio;
   final String ogre;
   final double ratingValue;
+  RatingData ratings;
   bool isLiked;
   bool isSwipedOff;
 
@@ -22,6 +24,7 @@ class User {
     required this.bio,
     required this.ogre,
     required this.ratingValue,
+    required this.ratings,
     this.isLiked = false,
     this.isSwipedOff = false,
   });
