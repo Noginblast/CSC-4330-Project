@@ -31,11 +31,13 @@ class _SwipePageState extends State<SwipePage> implements PreferredSizeWidget {
           padding: const EdgeInsets.all(8),
           child: Column(
             children: [
-              users.isEmpty? const Text(
-                'Uh Oh!!\nCome Back Tomorrow for More Matches!',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-              )
+              users.isEmpty
+                  ? const Text(
+                      'Uh Oh!!\nCome Back Tomorrow for More Matches!',
+                      textAlign: TextAlign.center,
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    )
                   : Stack(children: users.map(buildUser).toList()),
               Expanded(child: Container()),
               const BottomButtonsWidget()

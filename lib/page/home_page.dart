@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 import 'package:ratr_dating/model/user_lib.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/users.dart';
+import 'package:ratr_dating/page/opaque_image.dart';
+import 'package:ratr_dating/page/profile_info_big_card.dart';
 import 'package:ratr_dating/page/profile_view.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/styleguide/palette.dart';
@@ -25,20 +27,69 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Palette.kToDark[100],
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(100),
+          preferredSize: const Size.fromHeight(0),
           child: Container(color: Colors.transparent),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              // ProfileView(user: loggedInUser),
-              Expanded(child: Container()),
-              BottomButtonsWidget(),
-            ],
+          child: SingleChildScrollView(
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  height: 900,
+                  child: Column(
+                    children: <Widget>[
+                      Expanded(
+                        flex: 4,
+                        child: Stack(
+                          children: <Widget>[
+                            OpaqueImage(
+                              imageUrl: AssetImage(loggedInUser.imgUrl),
+                              user: loggedInUser,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Expanded(
+                        flex: 5,
+                        child: Container(
+                          color: Palette.kToDark[300],
+                          child: Table(
+                            children: [
+                              TableRow(
+                                children: [
+                                  ProfileInfoBigCard(
+                                    firstText: loggedInUser.name,
+                                    secondText: loggedInUser.bio,
+                                    icon: const Icon(
+                                      Icons.description,
+                                      color: Colors.purple,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              TableRow(children: [
+                                ProfileInfoBigCard(
+                                  firstText: loggedInUser.name,
+                                  secondText: loggedInUser.bio,
+                                  icon: const Icon(
+                                    Icons.description,
+                                    color: Colors.purple,
+                                  ),
+                                ),
+                              ])
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
+        bottomNavigationBar: const BottomButtonsWidget(),
       );
 
   Widget buildAppBar() => AppBar(

@@ -40,6 +40,6 @@ final loggedInUser = User(
   bio: 'Not a king... Yet.',
   location: 'DuLoc, the Perfect... Princedom?',
   ogre: 'no',
-  imgUrl: 'assets/user1.jpg',
+  imgUrl: 'assets/user0.jpg',
   ratingValue: 1,
 );
