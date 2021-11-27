@@ -6,6 +6,7 @@ import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/page/profile_view.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
 
@@ -22,6 +23,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Palette.kToDark[100],
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(100),
           child: Container(color: Colors.transparent),

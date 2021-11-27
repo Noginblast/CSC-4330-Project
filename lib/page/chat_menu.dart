@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/message_model.dart';
 import 'package:ratr_dating/model/user.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 import 'chat_page.dart';
 
@@ -9,6 +10,7 @@ class ChatMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Palette.kToDark[50],
       appBar: AppBar(
         title: Text('Chat Menu'),
       ),

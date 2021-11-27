@@ -97,46 +97,46 @@ class _EditProfileState extends State<EditProfile> {
           padding: const EdgeInsets.all(20),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            const Text(
-              'Select your pronouns',
-              style: TextStyle(fontSize: 24),
-            ),
-            const SizedBox(height: 10),
-            const Divider(),
-            const SizedBox(height: 10),
+                const Text(
+                  'Select your pronouns',
+                  style: TextStyle(fontSize: 24),
+                ),
+                const SizedBox(height: 10),
+                const Divider(),
+                const SizedBox(height: 10),
 
-            // The checkboxes will be here
-            Column(
-                children: pronouns.map((selection) {
-              return CheckboxListTile(
-                  value: selection["isChecked"],
-                  title: Text(selection["name"]),
-                  onChanged: (newValue) {
-                    setState(() {
-                      selection["isChecked"] = newValue;
-                    });
-                  });
-            }).toList()),
+                // The checkboxes will be here
+                Column(
+                    children: pronouns.map((selection) {
+                  return CheckboxListTile(
+                      value: selection["isChecked"],
+                      title: Text(selection["name"]),
+                      onChanged: (newValue) {
+                        setState(() {
+                          selection["isChecked"] = newValue;
+                        });
+                      });
+                }).toList()),
 
-            // Display the result here
-            const SizedBox(height: 10),
-            const Divider(),
-            const SizedBox(height: 10),
-            Wrap(
-              children: pronouns.map((selection) {
-                if (selection["isChecked"] == true) {
-                  return Card(
-                    elevation: 3,
-                    color: Colors.amber,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(selection["name"]),
-                    ),
-                  );
-                }
-                return Container();
-              }).toList(),
-            )
+                // Display the result here
+                const SizedBox(height: 10),
+                const Divider(),
+                const SizedBox(height: 10),
+                Wrap(
+                  children: pronouns.map((selection) {
+                    if (selection["isChecked"] == true) {
+                      return Card(
+                        elevation: 3,
+                        color: Colors.amber,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(selection["name"]),
+                        ),
+                      );
+                    }
+                    return Container();
+                  }).toList(),
+                )
           ]),
         ),
       ),
