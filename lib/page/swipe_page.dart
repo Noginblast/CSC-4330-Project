@@ -40,10 +40,10 @@ class _SwipePageState extends State<SwipePage> implements PreferredSizeWidget {
                     )
                   : Stack(children: users.map(buildUser).toList()),
               Expanded(child: Container()),
-              const BottomButtonsWidget()
             ],
           ),
         ),
+        bottomNavigationBar: BottomButtonsWidget(),
       );
 
   Widget buildUser(User user) {

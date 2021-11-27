@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
             ),
           ),
         ),
-        bottomNavigationBar: const BottomButtonsWidget(),
+        bottomNavigationBar: BottomButtonsWidget(),
       );
 
   Widget buildAppBar() => AppBar(
