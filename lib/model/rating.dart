@@ -9,7 +9,7 @@ class RatingPage extends StatefulWidget {
 }
 
 class _RatingPageState extends State<RatingPage> {
-  late double ratingValue;
+  late double ratingValue = 0.0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -99,7 +99,7 @@ class RatingData {
           tempRating[i] += submittedRatings[j][i];
         }
         tempRating[i] /= numRatings;
-        rating[ratingTypes[i]] = max(0.0, tempRating[i] / numRatings);
+        rating[ratingTypes[i]] = max(0.0, tempRating[i]);
       }
     }
   }

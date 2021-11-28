@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ratr_dating/model/rating.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/model/user_lib.dart';
 import 'package:ratr_dating/model/message_model.dart';
@@ -134,7 +135,7 @@ class _ChatScreenState extends State<ChatScreen> {
             icon: Icon(Icons.more_horiz),
             iconSize: 30.0,
             color: Colors.white,
-            onPressed: () {},
+            onPressed: () { _navigateToRatingScreen(context);},
           ),
         ],
       ),
@@ -174,5 +175,10 @@ class _ChatScreenState extends State<ChatScreen> {
         ),
       ),
     );
+  }
+
+  void _navigateToRatingScreen(BuildContext context) {
+    Navigator.of(context)
+        .push(MaterialPageRoute(builder: (context) => const RatingPage()));
   }
 }
