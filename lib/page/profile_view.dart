@@ -58,8 +58,11 @@ class ProfileView extends StatelessWidget {
                           TableRow(
                               children: [
                                 ProfileInfoRatingCard(
-                                    ratingType: 'Conversation',
-                                    ratingData: user.ratings)
+                                    ratingType1: 'Conversation',
+                                    ratingType2: 'Respect',
+                                    ratingType3: 'Humor',
+                                    ratingData: user.ratings
+                                ),
                               ]
                           )
                         ],

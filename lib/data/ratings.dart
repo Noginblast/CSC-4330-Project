@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe;
 import 'package:smooth_star_rating/smooth_star_rating.dart';
@@ -93,11 +95,11 @@ class RatingData {
       int numRatings = submittedRatings.length;
       var ratingTypes = ['Conversation', 'Respect', 'Humor'];
       for (int i = 0; i < ratingTypes.length; i++) {
-        for (int j = 0; j < numRatings; j++) {
+        for (int j = 0; j < numRatings ; j++) {
           tempRating[i] += submittedRatings[j][i];
         }
         tempRating[i] /= numRatings;
-        rating[ratingTypes[i]] = tempRating[i] / numRatings;
+        rating[ratingTypes[i]] = max(0.0, tempRating[i] / numRatings);
       }
     }
   }

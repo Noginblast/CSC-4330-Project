@@ -3,10 +3,12 @@ import 'package:ratr_dating/styleguide/text_style.dart';
 import 'package:flutter/material.dart';
 
 class ProfileInfoRatingCard extends StatelessWidget {
-  final String ratingType;
+  final String ratingType1;
+  final String ratingType2;
+  final String ratingType3;
   final RatingData ratingData;
 
-  const ProfileInfoRatingCard({Key? key, required this.ratingType, required this.ratingData}) : super(key: key);
+  const ProfileInfoRatingCard({Key? key, required this.ratingType1, required this.ratingType2, required this.ratingType3, required this.ratingData}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,19 +28,19 @@ class ProfileInfoRatingCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(ratingType),
+            Text(ratingType1),
             RatingDisplay(
-              ratingType: ratingType,
+              ratingType: ratingType1,
               ratings: ratingData,
             ),
-            Text(ratingType),
+            Text(ratingType2),
             RatingDisplay(
-              ratingType: ratingType,
+              ratingType: ratingType2,
               ratings: ratingData,
             ),
-            Text(ratingType),
+            Text(ratingType3),
             RatingDisplay(
-              ratingType: ratingType,
+              ratingType: ratingType3,
               ratings: ratingData,
             ),
           ],

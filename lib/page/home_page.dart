@@ -73,8 +73,11 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                               TableRow(
                                 children: [
                                   ProfileInfoRatingCard(
-                                      ratingType: 'Conversation',
-                                      ratingData: loggedInUser.ratings)
+                                      ratingType1: 'Conversation',
+                                      ratingType2: 'Respect',
+                                      ratingType3: 'Humor',
+                                      ratingData: loggedInUser.ratings
+                                  )
                                 ],
                               ),
                             ],

@@ -21,7 +21,7 @@ class LordFarquaad {
 
   late List<User> allUsers;
 
-  void createNewUser(User cinderella) {
+  void createNewUser(User farquaad) {
     allUsers.add(User(
       name: 'Maximus',
       designation: 'Rightful ruler of the Kingdom of Duloc',
