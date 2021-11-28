@@ -23,12 +23,13 @@ class ChatMenu extends StatelessWidget {
   }
 
   Widget _buildContent(BuildContext context) {
-    return ListView.builder(
+    return ListView.separated(
+      padding: EdgeInsets.all(8),
       itemCount: chats.length,
       itemBuilder: (BuildContext content, int index) {
         Message chat = chats[index];
         return ContactListTile(chat, context);
-      },
+      }, separatorBuilder: (BuildContext context, int index) => const Divider(),
     );
   }
 }
@@ -36,6 +37,7 @@ class ChatMenu extends StatelessWidget {
 class ContactListTile extends ListTile {
   ContactListTile(Message chat, BuildContext context)
       : super(
+            tileColor: Palette.kToDark[100],
             title: Text(chat.sender.name),
             subtitle: Text(chat.text + '\n' + chat.time),
             leading: CircleAvatar(child: Text(chat.sender.name[0])),

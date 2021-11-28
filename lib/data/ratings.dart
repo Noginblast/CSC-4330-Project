@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// ignore: import_of_legacy_library_into_null_safe
+// ignore: import_of_legacy_library_into_null_safe;
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
 // void main() => runApp(const RatingDisplay());

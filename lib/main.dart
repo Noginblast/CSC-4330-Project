@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:ratr_dating/model/rating.dart';
 import 'package:ratr_dating/page/chat_page.dart';
 import 'package:ratr_dating/page/home_page.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';

@@ -7,6 +7,7 @@ import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/page/opaque_image.dart';
 import 'package:ratr_dating/page/profile_info_big_card.dart';
+import 'package:ratr_dating/page/profile_info_rating_card.dart';
 import 'package:ratr_dating/page/profile_view.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
 import 'package:ratr_dating/styleguide/palette.dart';
@@ -71,10 +72,9 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                               ),
                               TableRow(
                                 children: [
-                                  RatingDisplay(
-                                    ratingType: 'Conversation',
-                                    ratings: loggedInUser.ratings,
-                                  ),
+                                  ProfileInfoRatingCard(
+                                      ratingType: 'Conversation',
+                                      ratingData: loggedInUser.ratings)
                                 ],
                               ),
                             ],

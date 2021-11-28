@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/page/profile_info_big_card.dart';
+import 'package:ratr_dating/page/profile_info_rating_card.dart';
 import 'package:ratr_dating/styleguide/colors.dart';
 import 'package:ratr_dating/styleguide/palette.dart';
 
@@ -56,14 +57,9 @@ class ProfileView extends StatelessWidget {
                           ),
                           TableRow(
                               children: [
-                                ProfileInfoBigCard(
-                                  firstText: user.name,
-                                  secondText: user.bio,
-                                  icon: const Icon(
-                                    Icons.description,
-                                    color: Colors.purple,
-                                  ),
-                                ),
+                                ProfileInfoRatingCard(
+                                    ratingType: 'Conversation',
+                                    ratingData: user.ratings)
                               ]
                           )
                         ],
