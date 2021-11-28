@@ -95,7 +95,7 @@ class RatingData {
       int numRatings = submittedRatings.length;
       var ratingTypes = ['Conversation', 'Respect', 'Humor'];
       for (int i = 0; i < ratingTypes.length; i++) {
-        for (int j = 0; j < numRatings ; j++) {
+        for (int j = 0; j < numRatings; j++) {
           tempRating[i] += submittedRatings[j][i];
         }
         tempRating[i] /= numRatings;
