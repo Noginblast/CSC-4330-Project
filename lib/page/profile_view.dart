@@ -28,7 +28,7 @@ class _ProfileViewState extends State<ProfileView>{
         child: Stack(
           children: <Widget>[
             Container(
-              height: 900,
+              height: 1300,
               child: Column(
                 children: <Widget>[
                   Expanded(
@@ -43,7 +43,7 @@ class _ProfileViewState extends State<ProfileView>{
                     ),
                   ),
                   Expanded(
-                    flex: 5,
+                    flex: 9,
                     child: Container(
                       color: Palette.kToDark[300],
                       child: Table(

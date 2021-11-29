@@ -90,7 +90,9 @@ class _RatingPageState extends State<RatingPage> {
                 const SizedBox(height: 50),
                 ElevatedButton(
                     style: ElevatedButton.styleFrom(fixedSize: const Size(150,70)),
-                    onPressed: () {widget.user.ratings.submitRating([convValue,respValue,humValue]);},
+                    onPressed: () {widget.user.ratings.submitRating([convValue,respValue,humValue]);
+                                    Navigator.pop(context);
+                    },
                     child: const Text('Submit'),
                 ),
               ],
