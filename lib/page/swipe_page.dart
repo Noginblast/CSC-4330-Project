@@ -19,7 +19,7 @@ class SwipePage extends StatefulWidget {
 
 // ignore: must_be_immutable
 class _SwipePageState extends State<SwipePage> implements PreferredSizeWidget {
-  final List<User> users = dummyUsers;
+  final List<User> users = List.from(dummyUsers);
 
   @override
   Widget build(BuildContext context) => Scaffold(
