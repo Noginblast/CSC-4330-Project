@@ -1,3 +1,6 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 class UserTags {
   final String userID;
   List<String> tags;
@@ -40,4 +43,25 @@ class Tags {
     'Woman',
     'Non-Binary',
   ];
+}
+
+class TagDisplay extends StatelessWidget {
+  List<String> tagList;
+  TagDisplay({
+    Key? key,
+    required this.tagList,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      elevation: 5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20),
+      ),
+      color: Colors.lightBlue,
+      child: Text('Interests'),
+    );
+  }
 }
