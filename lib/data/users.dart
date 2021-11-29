@@ -51,35 +51,74 @@ final loggedInUser = User(
 
 RatingData _PFRatings() {
   var pfRatings = RatingData();
-  pfRatings.submitRating([1, 2, 2]);
-  pfRatings.submitRating([4, 1, 3]);
-  pfRatings.submitRating([2, 3, 1]);
+  List<List<double>> submissions = [];
+  submissions.add([1.0, 2.0, 2.0]);
+  submissions.add([4.0, 1.0, 3.0]);
+  submissions.add([2.0, 3.0, 1.0]);
+
+  for(int i = 0; i < submissions.length; i++)
+    {
+      pfRatings.submitRating(submissions[i]);
+    }
+  //pfRatings.submitRating([1, 2, 2]);
+  //pfRatings.submitRating([4, 1, 3]);
+  //pfRatings.submitRating([2, 3, 1]);
   return pfRatings;
 }
 
 RatingData _SWRatings() {
   var swRatings = RatingData();
-  swRatings.submitRating([5, 5, 1]);
-  swRatings.submitRating([4, 3, 2]);
+  List<List<double>> submissions = [];
+  submissions.add([5.0, 5.0, 1.0]);
+  submissions.add([4.0, 3.0, 2.0]);
+
+  for(int i = 0; i < submissions.length; i++)
+  {
+    swRatings.submitRating(submissions[i]);
+  }
+  //swRatings.submitRating([5, 5, 1]);
+  //swRatings.submitRating([4, 3, 2]);
   return swRatings;
 }
 
 RatingData _CRatings() {
   var cRatings = RatingData();
-  cRatings.submitRating([5, 5, 3]);
-  cRatings.submitRating([4, 5, 4]);
-  cRatings.submitRating([3, 5, 3]);
-  cRatings.submitRating([5, 5, 4]);
+  List<List<double>> submissions = [];
+  submissions.add([5.0, 5.0, 3.0]);
+  submissions.add([4.0, 5.0, 4.0]);
+  submissions.add([3.0, 5.0, 3.0]);
+  submissions.add([5.0, 5.0, 4.0]);
+
+  for(int i = 0; i < submissions.length; i++)
+  {
+    cRatings.submitRating(submissions[i]);
+  }
+  //cRatings.submitRating([5, 5, 3]);
+  //cRatings.submitRating([4, 5, 4]);
+  //cRatings.submitRating([3, 5, 3]);
+  //cRatings.submitRating([5, 5, 4]);
   return cRatings;
 }
 
 RatingData _FqRatings() {
   var fqRatings = RatingData();
-  fqRatings.submitRating([3, 1, 2]);
-  fqRatings.submitRating([1, 1, 1]);
-  fqRatings.submitRating([1, 1, 1]);
-  fqRatings.submitRating([1, 1, 1]);
-  fqRatings.submitRating([2, 1, 2]);
-  fqRatings.submitRating([1, 1, 2]);
+  List<List<double>> submissions = [];
+  submissions.add([3.0, 1.0, 2.0]);
+  submissions.add([1.0, 1.0, 1.0]);
+  submissions.add([1.0, 1.0, 1.0]);
+  submissions.add([1.0, 1.0, 1.0]);
+  submissions.add([2.0, 1.0, 2.0]);
+  submissions.add([1.0, 1.0, 2.0]);
+
+  for(int i = 0; i < submissions.length; i++)
+  {
+    fqRatings.submitRating(submissions[i]);
+  }
+  //fqRatings.submitRating([3, 1, 2]);
+  //fqRatings.submitRating([1, 1, 1]);
+  //fqRatings.submitRating([1, 1, 1]);
+  //fqRatings.submitRating([1, 1, 1]);
+  //fqRatings.submitRating([2, 1, 2]);
+  //fqRatings.submitRating([1, 1, 2]);
   return fqRatings;
 }

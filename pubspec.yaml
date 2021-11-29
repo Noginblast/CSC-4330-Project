@@ -41,6 +41,7 @@ dependencies:
   flutter_chat_ui: ^1.5.2
   bottom_navy_bar: ^6.0.0
   shared_preferences: ^2.0.9
+  material_design_icons_flutter: ^5.0.6295
 
 dev_dependencies:
   flutter_test:

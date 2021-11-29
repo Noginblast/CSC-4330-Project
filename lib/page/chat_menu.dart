@@ -37,7 +37,7 @@ class ChatMenu extends StatelessWidget {
 class ContactListTile extends ListTile {
   ContactListTile(Message chat, BuildContext context)
       : super(
-            tileColor: Palette.kToDark[100],
+            tileColor: Colors.white70,
             title: Text(chat.sender.name),
             subtitle: Text(chat.text + '\n' + chat.time),
             leading: CircleAvatar(child: Text(chat.sender.name[0])),

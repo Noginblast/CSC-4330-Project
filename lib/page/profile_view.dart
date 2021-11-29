@@ -7,7 +7,7 @@ import 'package:ratr_dating/styleguide/palette.dart';
 
 import 'opaque_image.dart';
 
-class ProfileView extends StatelessWidget {
+class ProfileView extends StatefulWidget {
   final User user;
 
   // ignore: use_key_in_widget_constructors
@@ -15,6 +15,11 @@ class ProfileView extends StatelessWidget {
     required this.user,
   });
 
+  @override
+  _ProfileViewState createState() => _ProfileViewState();
+}
+
+class _ProfileViewState extends State<ProfileView>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,8 +36,8 @@ class ProfileView extends StatelessWidget {
                     child: Stack(
                       children: <Widget>[
                         OpaqueImage(
-                          imageUrl: AssetImage(user.imgUrl),
-                          user: user,
+                          imageUrl: AssetImage(widget.user.imgUrl),
+                          user: widget.user,
                         ),
                       ],
                     ),
@@ -46,8 +51,8 @@ class ProfileView extends StatelessWidget {
                           TableRow(
                             children: [
                               ProfileInfoBigCard(
-                                firstText: user.name,
-                                secondText: user.bio,
+                                firstText: widget.user.name,
+                                secondText: widget.user.bio,
                                 icon: const Icon(
                                   Icons.description,
                                   color: Colors.purple,
@@ -61,7 +66,7 @@ class ProfileView extends StatelessWidget {
                                     ratingType1: 'Conversation',
                                     ratingType2: 'Respect',
                                     ratingType3: 'Humor',
-                                    ratingData: user.ratings
+                                    ratingData: widget.user.ratings
                                 ),
                               ]
                           )
