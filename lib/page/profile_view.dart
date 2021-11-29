@@ -19,11 +19,13 @@ class ProfileView extends StatefulWidget {
   _ProfileViewState createState() => _ProfileViewState();
 }
 
-class _ProfileViewState extends State<ProfileView>{
+class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: primaryColor,
+      ),
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
@@ -45,7 +47,8 @@ class _ProfileViewState extends State<ProfileView>{
                   Expanded(
                     flex: 9,
                     child: Container(
-                      color: Palette.kToDark[300],
+                      // color: Palette.kToDark[300],
+                      color: secondaryColor,
                       child: Table(
                         children: [
                           TableRow(
@@ -60,16 +63,13 @@ class _ProfileViewState extends State<ProfileView>{
                               ),
                             ],
                           ),
-                          TableRow(
-                              children: [
-                                ProfileInfoRatingCard(
-                                    ratingType1: 'Conversation',
-                                    ratingType2: 'Respect',
-                                    ratingType3: 'Humor',
-                                    ratingData: widget.user.ratings
-                                ),
-                              ]
-                          )
+                          TableRow(children: [
+                            ProfileInfoRatingCard(
+                                ratingType1: 'Conversation',
+                                ratingType2: 'Respect',
+                                ratingType3: 'Humor',
+                                ratingData: widget.user.ratings),
+                          ])
                         ],
                       ),
                     ),

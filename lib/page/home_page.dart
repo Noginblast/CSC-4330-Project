@@ -12,6 +12,7 @@ import 'package:ratr_dating/page/profile_info_rating_card.dart';
 import 'package:ratr_dating/page/profile_info_tag_card.dart';
 import 'package:ratr_dating/page/profile_view.dart';
 import 'package:ratr_dating/provider/feedback_position_provider.dart';
+import 'package:ratr_dating/styleguide/colors.dart';
 import 'package:ratr_dating/styleguide/palette.dart';
 import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'package:ratr_dating/widget/user_card_widget.dart';
@@ -29,7 +30,8 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        backgroundColor: Palette.kToDark[100],
+        // backgroundColor: Palette.kToDark[100],
+        backgroundColor: primaryColor,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(0),
           child: Container(color: Colors.transparent),
@@ -57,7 +59,8 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                       Expanded(
                         flex: 9,
                         child: Container(
-                          color: Palette.kToDark[300],
+                          // color: Palette.kToDark[300],
+                          color: secondaryColor,
                           child: Table(
                             children: [
                               TableRow(
@@ -109,17 +112,17 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
         bottomNavigationBar: BottomButtonsWidget(),
       );
 
-  Widget buildAppBar() => AppBar(
-        centerTitle: true,
-        backgroundColor: Colors.white,
-        elevation: 0,
-        actions: const [
-          Icon(Icons.chat, color: Colors.pink),
-          SizedBox(width: 16),
-        ],
-        leading: const Icon(Icons.person, color: Colors.pink),
-        title: const FaIcon(FontAwesomeIcons.fire, color: Colors.pink),
-      );
+  // Widget buildAppBar() => AppBar(
+  //       centerTitle: true,
+  //       backgroundColor: Colors.white,
+  //       elevation: 0,
+  //       actions: const [
+  //         Icon(Icons.chat, color: Colors.pink),
+  //         SizedBox(width: 16),
+  //       ],
+  //       leading: const Icon(Icons.person, color: Colors.pink),
+  //       title: const FaIcon(FontAwesomeIcons.fire, color: Colors.pink),
+  //     );
 
   void tempFunc() {
     Navigator.of(context).push(MaterialPageRoute(

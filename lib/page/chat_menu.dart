@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/message_model.dart';
 import 'package:ratr_dating/model/user.dart';
+import 'package:ratr_dating/styleguide/colors.dart';
 import 'package:ratr_dating/styleguide/palette.dart';
 import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 
@@ -10,12 +11,15 @@ class ChatMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Palette.kToDark[50],
+      // backgroundColor: Palette.kToDark[50],
+      backgroundColor: primaryColor,
       appBar: AppBar(
+        backgroundColor: primaryColor,
         title: Text('Chat Menu'),
         automaticallyImplyLeading: false,
       ),
       body: Container(
+        color: secondaryColor,
         child: _buildContent(context),
       ),
       bottomNavigationBar: BottomButtonsWidget(),
@@ -29,7 +33,8 @@ class ChatMenu extends StatelessWidget {
       itemBuilder: (BuildContext content, int index) {
         Message chat = chats[index];
         return ContactListTile(chat, context);
-      }, separatorBuilder: (BuildContext context, int index) => const Divider(),
+      },
+      separatorBuilder: (BuildContext context, int index) => const Divider(),
     );
   }
 }
