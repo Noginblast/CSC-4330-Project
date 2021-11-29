@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                                     secondText: loggedInUser.bio,
                                     icon: const Icon(
                                       Icons.description,
-                                      color: Colors.purple,
+                                      color: primaryColor,
                                     ),
                                   ),
                                 ],

@@ -58,7 +58,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 secondText: widget.user.bio,
                                 icon: const Icon(
                                   Icons.description,
-                                  color: Colors.purple,
+                                  color: primaryColor,
                                 ),
                               ),
                             ],
