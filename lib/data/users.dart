@@ -1,9 +1,11 @@
 import 'package:ratr_dating/data/ratings.dart';
+import 'package:ratr_dating/model/tags.dart';
 import 'package:ratr_dating/model/user.dart';
 
 final dummyUsers = [
   User(
     name: 'Princess Fiona',
+    userID: '4',
     designation: 'A fiery redhead',
     bio:
         'I\'m a loaded pistol who likes pina coladas and getting caught in the rain',
@@ -13,9 +15,11 @@ final dummyUsers = [
     imgUrl: 'assets/user3.jpg',
     ratingValue: 5,
     ratings: _PFRatings(),
+    userTags: _PFTags(),
   ),
   User(
     name: 'Snow White',
+    userID: '3',
     designation: 'A Cape wearing girl',
     bio:
         'I live with seven other men, but I am NOT easy. Just kiss my dead, frozen lips and find out what a live wire I am!',
@@ -24,9 +28,11 @@ final dummyUsers = [
     imgUrl: 'assets/user2.jpg',
     ratingValue: 3,
     ratings: _SWRatings(),
+    userTags: _SWTags(),
   ),
   User(
     name: 'Cinderella',
+    userID: '2',
     designation: 'A mentally abused shut-in',
     bio:
         'I like sushi and hottubing anytime! My hobbies include cooking and cleaning for my two evil sisters',
@@ -35,11 +41,13 @@ final dummyUsers = [
     imgUrl: 'assets/user1.jpg',
     ratingValue: 4,
     ratings: _CRatings(),
+    userTags: _CTags(),
   ),
 ];
 
 final loggedInUser = User(
   name: 'Lord Farquaad',
+  userID: '1',
   designation: 'Not the monster here',
   bio: 'Not a king... Yet.',
   location: 'DuLoc, the Perfect... Princedom?',
@@ -47,6 +55,7 @@ final loggedInUser = User(
   imgUrl: 'assets/user0.jpg',
   ratingValue: 1,
   ratings: _FqRatings(),
+  userTags: _FqTags(),
 );
 
 RatingData _PFRatings() {
@@ -57,11 +66,23 @@ RatingData _PFRatings() {
   return pfRatings;
 }
 
+UserTags _PFTags() {
+  var pfTags = UserTags(userID: '4');
+  pfTags.setupNewTags();
+  return pfTags;
+}
+
 RatingData _SWRatings() {
   var swRatings = RatingData();
   swRatings.submitRating([5, 5, 1]);
   swRatings.submitRating([4, 3, 2]);
   return swRatings;
+}
+
+UserTags _SWTags() {
+  var swTags = UserTags(userID: '3');
+  swTags.setupNewTags();
+  return swTags;
 }
 
 RatingData _CRatings() {
@@ -73,6 +94,12 @@ RatingData _CRatings() {
   return cRatings;
 }
 
+UserTags _CTags() {
+  var cTags = UserTags(userID: '2');
+  cTags.setupNewTags();
+  return cTags;
+}
+
 RatingData _FqRatings() {
   var fqRatings = RatingData();
   fqRatings.submitRating([3, 1, 2]);
@@ -82,4 +109,10 @@ RatingData _FqRatings() {
   fqRatings.submitRating([2, 1, 2]);
   fqRatings.submitRating([1, 1, 2]);
   return fqRatings;
+}
+
+UserTags _FqTags() {
+  var fqTags = UserTags(userID: '1');
+  fqTags.setupNewTags();
+  return fqTags;
 }

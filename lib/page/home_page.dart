@@ -5,6 +5,7 @@ import 'package:ratr_dating/data/ratings.dart';
 import 'package:ratr_dating/model/user_lib.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/users.dart';
+import 'package:ratr_dating/page/edit_page.dart';
 import 'package:ratr_dating/page/opaque_image.dart';
 import 'package:ratr_dating/page/profile_info_big_card.dart';
 import 'package:ratr_dating/page/profile_info_rating_card.dart';
@@ -76,10 +77,17 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                                       ratingType1: 'Conversation',
                                       ratingType2: 'Respect',
                                       ratingType3: 'Humor',
-                                      ratingData: loggedInUser.ratings
-                                  )
+                                      ratingData: loggedInUser.ratings)
                                 ],
                               ),
+                              TableRow(
+                                children: [
+                                  IconButton(
+                                    onPressed: tempFunc,
+                                    icon: const Icon(Icons.settings),
+                                  )
+                                ],
+                              )
                             ],
                           ),
                         ),
@@ -105,6 +113,13 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
         leading: const Icon(Icons.person, color: Colors.pink),
         title: const FaIcon(FontAwesomeIcons.fire, color: Colors.pink),
       );
+
+  void tempFunc() {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => EditPage(
+              user: loggedInUser,
+            )));
+  }
 
   @override
   Element createElement() {
