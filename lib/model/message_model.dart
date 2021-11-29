@@ -3,13 +3,14 @@ import 'dart:io';
 import 'package:ratr_dating/data/cinderella.dart';
 import 'package:ratr_dating/data/fiona.dart';
 import 'package:ratr_dating/data/snow_white.dart';
+import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/data/all.dart';
 
 class Message {
   final User sender;
   final String
-  time; // Would usually be type DateTime or Firebase Timestamp in production apps
+      time; // Would usually be type DateTime or Firebase Timestamp in production apps
   final String text;
   final bool isLiked;
   final bool unread;
@@ -24,14 +25,17 @@ class Message {
 }
 
 // YOU - current user
-final User currentUser = PrincessCinderella().cinderella;
+// final User currentUser = PrincessCinderella().cinderella;
+final User currentUser = loggedInUser;
 
 // USERS
-final User fiona = PrincessFiona().fiona;
+// final User fiona = PrincessFiona().fiona;
+// final User snowWhite = PrincessSnowWhite().snowWhite;
+// final User cinderella = PrincessCinderella().cinderella;
 
-final User snowWhite = PrincessSnowWhite().snowWhite;
-
-final User cinderella = PrincessCinderella().cinderella;
+final User fiona = dummyUsers[0];
+final User snowWhite = dummyUsers[1];
+final User cinderella = dummyUsers[2];
 
 // FAVORITE CONTACTS
 List<User> favorites = [fiona, snowWhite, cinderella];
