@@ -21,81 +21,79 @@ class _RatingPageState extends State<RatingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Ratr Dating'),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(25),
-          child: Center(
-            child: Column(
-              children: [
-                const Text(
-                  'How\'d I do?',
-                  style: TextStyle(fontSize: 24),
-                ),
-                const SizedBox(height: 25),
-                SingleChildScrollView(
-                  child: Column(children: [
-                    RatingBar(
-                        initialRating: 0,
-                        direction: Axis.horizontal,
-                        allowHalfRating: true,
-                        itemCount: 5,
-                        ratingWidget: RatingWidget(
-                            full:
-                                const Icon(MdiIcons.heart, color: Colors.pink),
-                            half: const Icon(MdiIcons.heartHalfFull,
-                                color: Colors.pink),
-                            empty: const Icon(MdiIcons.heartOutline,
-                                color: Colors.pink)),
-                        onRatingUpdate: (value) {
-                          setState(() {
-                            convValue = value;
-                          });
-                        }),
-                    const Text('Conversation'),
-                    const SizedBox(height: 80),
-                    RatingBar(
-                        initialRating: 0,
-                        direction: Axis.horizontal,
-                        allowHalfRating: true,
-                        itemCount: 5,
-                        ratingWidget: RatingWidget(
-                            full:
-                                const Icon(MdiIcons.heart, color: Colors.pink),
-                            half: const Icon(MdiIcons.heartHalfFull,
-                                color: Colors.pink),
-                            empty: const Icon(MdiIcons.heartOutline,
-                                color: Colors.pink)),
-                        onRatingUpdate: (value) {
-                          setState(() {
-                            respValue = value;
-                          });
-                        }),
-                    const Text('Respect'),
-                    const SizedBox(height: 80),
-                    RatingBar(
-                        initialRating: 0,
-                        direction: Axis.horizontal,
-                        allowHalfRating: true,
-                        itemCount: 5,
-                        ratingWidget: RatingWidget(
-                            full:
-                                const Icon(MdiIcons.heart, color: Colors.pink),
-                            half: const Icon(MdiIcons.heartHalfFull,
-                                color: Colors.pink),
-                            empty: const Icon(MdiIcons.heartOutline,
-                                color: Colors.pink)),
-                        onRatingUpdate: (value) {
-                          setState(() {
-                            humValue = value;
-                          });
-                        }),
-                    const Text('Humor'),
-                  ]),
-                ),
-                const SizedBox(height: 50),
-                ElevatedButton(
+      appBar: AppBar(
+        title: const Text('Ratr Dating'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(25),
+        child: Center(
+          child: Column(
+            children: [
+              const Text(
+                'How\'d I do?',
+                style: TextStyle(fontSize: 24),
+              ),
+              const SizedBox(height: 25),
+              SingleChildScrollView(
+                child: Column(children: [
+                  RatingBar(
+                      initialRating: 0,
+                      direction: Axis.horizontal,
+                      allowHalfRating: true,
+                      itemCount: 5,
+                      ratingWidget: RatingWidget(
+                          full: const Icon(MdiIcons.heart, color: Colors.pink),
+                          half: const Icon(MdiIcons.heartHalfFull,
+                              color: Colors.pink),
+                          empty: const Icon(MdiIcons.heartOutline,
+                              color: Colors.pink)),
+                      onRatingUpdate: (value) {
+                        setState(() {
+                          convValue = value;
+                        });
+                      }),
+                  const Text('Conversation'),
+                  const SizedBox(height: 80),
+                  RatingBar(
+                      initialRating: 0,
+                      direction: Axis.horizontal,
+                      allowHalfRating: true,
+                      itemCount: 5,
+                      ratingWidget: RatingWidget(
+                          full: const Icon(MdiIcons.heart, color: Colors.pink),
+                          half: const Icon(MdiIcons.heartHalfFull,
+                              color: Colors.pink),
+                          empty: const Icon(MdiIcons.heartOutline,
+                              color: Colors.pink)),
+                      onRatingUpdate: (value) {
+                        setState(() {
+                          respValue = value;
+                        });
+                      }),
+                  const Text('Respect'),
+                  const SizedBox(height: 80),
+                  RatingBar(
+                      initialRating: 0,
+                      direction: Axis.horizontal,
+                      allowHalfRating: true,
+                      itemCount: 5,
+                      ratingWidget: RatingWidget(
+                          full: const Icon(MdiIcons.heart, color: Colors.pink),
+                          half: const Icon(MdiIcons.heartHalfFull,
+                              color: Colors.pink),
+                          empty: const Icon(MdiIcons.heartOutline,
+                              color: Colors.pink)),
+                      onRatingUpdate: (value) {
+                        setState(() {
+                          humValue = value;
+                        });
+                      }),
+                  const Text('Humor'),
+                ]),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: ElevatedButton(
                   style:
                       ElevatedButton.styleFrom(fixedSize: const Size(150, 70)),
                   onPressed: () {
@@ -105,9 +103,11 @@ class _RatingPageState extends State<RatingPage> {
                   },
                   child: const Text('Submit'),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
