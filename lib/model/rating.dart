@@ -53,7 +53,7 @@ class _RatingPageState extends State<RatingPage> {
                         });
                       }),
                   const Text('Conversation'),
-                  const SizedBox(height: 80),
+                  const SizedBox(height: 40),
                   RatingBar(
                       initialRating: 0,
                       direction: Axis.horizontal,
@@ -71,7 +71,7 @@ class _RatingPageState extends State<RatingPage> {
                         });
                       }),
                   const Text('Respect'),
-                  const SizedBox(height: 80),
+                  const SizedBox(height: 40),
                   RatingBar(
                       initialRating: 0,
                       direction: Axis.horizontal,
@@ -91,6 +91,7 @@ class _RatingPageState extends State<RatingPage> {
                   const Text('Humor'),
                 ]),
               ),
+              Spacer(),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: ElevatedButton(
