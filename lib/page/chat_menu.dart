@@ -12,14 +12,14 @@ class ChatMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Palette.kToDark[50],
-      backgroundColor: primaryColor,
+      backgroundColor: Palette.kToLight,
       appBar: AppBar(
-        backgroundColor: primaryColor,
+        backgroundColor: Palette.kToLight,
         title: Text('Chat Menu'),
         automaticallyImplyLeading: false,
       ),
       body: Container(
-        color: secondaryColor,
+        color: Palette.kToDark,
         child: _buildContent(context),
       ),
       bottomNavigationBar: BottomButtonsWidget(),

@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
         // backgroundColor: Palette.kToDark[100],
-        backgroundColor: primaryColor,
+        backgroundColor: Palette.kToLight,
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(0),
           child: Container(color: Colors.transparent),
@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                         flex: 9,
                         child: Container(
                           // color: Palette.kToDark[300],
-                          color: secondaryColor,
+                          color: Palette.kToDark,
                           child: Table(
                             children: [
                               TableRow(

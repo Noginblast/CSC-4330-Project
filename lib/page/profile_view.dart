@@ -24,7 +24,7 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: primaryColor,
+        backgroundColor: Palette.kToLight,
       ),
       body: SingleChildScrollView(
         child: Stack(
@@ -48,7 +48,7 @@ class _ProfileViewState extends State<ProfileView> {
                     flex: 9,
                     child: Container(
                       // color: Palette.kToDark[300],
-                      color: secondaryColor,
+                      color: Palette.kToDark,
                       child: Table(
                         children: [
                           TableRow(
