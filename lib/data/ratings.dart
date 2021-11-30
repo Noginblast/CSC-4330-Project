@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:ratr_dating/styleguide/colors.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 // ignore: import_of_legacy_library_into_null_safe;
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -70,8 +70,8 @@ class _RatingDisplayState extends State<RatingDisplay> {
       rating: widget.ratingVal,
       isReadOnly: true,
       size: 60,
-      color: secondaryColor,
-      borderColor: secondaryColor,
+      color: Palette.kToDark,
+      borderColor: Palette.kToDark,
       filledIconData: MdiIcons.heart,
       halfFilledIconData: MdiIcons.heartHalfFull,
       defaultIconData: MdiIcons.heartOutline,

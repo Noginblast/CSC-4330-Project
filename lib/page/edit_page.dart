@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/tags.dart';
 import 'package:ratr_dating/model/user.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 class EditPage extends StatefulWidget {
   final User user;
@@ -18,7 +19,9 @@ class _EditPageState extends State<EditPage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        backgroundColor: Palette.kToDark,
         appBar: AppBar(
+          backgroundColor: Palette.kToLight,
           title: const Text(
             'Profile Settings',
           ),
