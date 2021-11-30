@@ -41,16 +41,16 @@ class _EditPageState extends State<EditPage> {
         ),
         body: TabBarView(
           children: [
-            _buildTab(Tags.possibleTags),
-            _buildTab(Tags.possiblePronouns),
-            _buildTab(Tags.possibleGenders),
+            _buildTagTab(Tags.possibleTags),
+            _buildPronounTab(Tags.possiblePronouns),
+            _buildGenderTab(Tags.possibleGenders),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildTab(List<String> lst) {
+  Widget _buildTagTab(List<String> lst) {
     List<Widget> checkboxes = [];
     for (var element in lst) {
       checkboxes.add(CheckboxListTile(
@@ -65,6 +65,60 @@ class _EditPageState extends State<EditPage> {
           } else {
             setState(() {
               widget.user.userTags.tags.add(element);
+            });
+          }
+        },
+      ));
+    }
+    return SingleChildScrollView(
+      child: Column(
+        children: checkboxes,
+      ),
+    );
+  }
+
+  Widget _buildPronounTab(List<String> lst) {
+    List<Widget> checkboxes = [];
+    for (var element in lst) {
+      checkboxes.add(CheckboxListTile(
+        controlAffinity: ListTileControlAffinity.leading,
+        title: Text(element),
+        value: (widget.user.userTags.pronouns.contains(element)),
+        onChanged: (bool? value) {
+          if (!value!) {
+            setState(() {
+              widget.user.userTags.pronouns.remove(element);
+            });
+          } else {
+            setState(() {
+              widget.user.userTags.pronouns.add(element);
+            });
+          }
+        },
+      ));
+    }
+    return SingleChildScrollView(
+      child: Column(
+        children: checkboxes,
+      ),
+    );
+  }
+
+  Widget _buildGenderTab(List<String> lst) {
+    List<Widget> checkboxes = [];
+    for (var element in lst) {
+      checkboxes.add(CheckboxListTile(
+        controlAffinity: ListTileControlAffinity.leading,
+        title: Text(element),
+        value: (widget.user.userTags.preference.contains(element)),
+        onChanged: (bool? value) {
+          if (!value!) {
+            setState(() {
+              widget.user.userTags.preference.remove(element);
+            });
+          } else {
+            setState(() {
+              widget.user.userTags.preference.add(element);
             });
           }
         },

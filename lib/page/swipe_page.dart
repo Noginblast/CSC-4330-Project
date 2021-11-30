@@ -25,10 +25,10 @@ class _SwipePageState extends State<SwipePage> implements PreferredSizeWidget {
   Widget build(BuildContext context) => Scaffold(
         // backgroundColor: Palette.kToDark[100],
         backgroundColor: Palette.kToLight,
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(75),
-          child: Container(),
-        ),
+        // appBar: PreferredSize(
+        //   preferredSize: const Size.fromHeight(75),
+        //   child: Container(),
+        // ),
         body: Padding(
           padding: const EdgeInsets.all(8),
           child: Column(
