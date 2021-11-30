@@ -30,22 +30,28 @@ class _ProfileViewState extends State<ProfileView> {
         child: Stack(
           children: <Widget>[
             Container(
+              color: secondaryColor,
               height: 1300,
               child: Column(
                 children: <Widget>[
                   Expanded(
-                    flex: 4,
+                    flex: 45,
                     child: Stack(
                       children: <Widget>[
-                        OpaqueImage(
-                          imageUrl: AssetImage(widget.user.imgUrl),
-                          user: widget.user,
+                       Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          image: DecorationImage(
+                            image: AssetImage(widget.user.imgUrl),
+                            fit: BoxFit.fill,
+                          ),
                         ),
+                       )
                       ],
                     ),
                   ),
                   Expanded(
-                    flex: 9,
+                    flex: 85,
                     child: Container(
                       // color: Palette.kToDark[300],
                       color: secondaryColor,

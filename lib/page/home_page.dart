@@ -37,30 +37,32 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
           child: Container(color: Colors.transparent),
         ),
         body: Padding(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.all(1),
           child: SingleChildScrollView(
             child: Stack(
               children: <Widget>[
                 Container(
+                  color: primaryColor,
                   height: 1300,
                   child: Column(
                     children: <Widget>[
                       Expanded(
                         flex: 4,
-                        child: Stack(
-                          children: <Widget>[
-                            OpaqueImage(
-                              imageUrl: AssetImage(loggedInUser.imgUrl),
-                              user: loggedInUser,
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                              image: AssetImage(loggedInUser.imgUrl),
+                              fit: BoxFit.cover,
                             ),
-                          ],
-                        ),
+                          ),
+                        )
                       ),
                       Expanded(
                         flex: 9,
                         child: Container(
                           // color: Palette.kToDark[300],
-                          color: secondaryColor,
+                          color: primaryColor,
                           child: Table(
                             children: [
                               TableRow(

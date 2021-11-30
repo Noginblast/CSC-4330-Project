@@ -8,6 +8,8 @@ import 'package:ratr_dating/widget/bottom_buttons_widget.dart';
 import 'chat_page.dart';
 
 class ChatMenu extends StatelessWidget {
+  const ChatMenu({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,7 +17,7 @@ class ChatMenu extends StatelessWidget {
       backgroundColor: primaryColor,
       appBar: AppBar(
         backgroundColor: primaryColor,
-        title: Text('Chat Menu'),
+        title: const Text('Chat Menu'),
         automaticallyImplyLeading: false,
       ),
       body: Container(
@@ -28,7 +30,7 @@ class ChatMenu extends StatelessWidget {
 
   Widget _buildContent(BuildContext context) {
     return ListView.separated(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.all(8),
       itemCount: chats.length,
       itemBuilder: (BuildContext content, int index) {
         Message chat = chats[index];

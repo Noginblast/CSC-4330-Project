@@ -35,7 +35,7 @@ class UserCardWidget extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           boxShadow: const [
-            BoxShadow(color: Colors.black12, spreadRadius: 0.5),
+            BoxShadow(color: Colors.transparent, spreadRadius: 0.5),
           ],
           gradient: const LinearGradient(
             colors: [Colors.black12, Colors.black87],
