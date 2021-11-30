@@ -33,6 +33,13 @@ class Tags {
     'Fishing',
     'Video Games',
     'Pets',
+    'Cleaning',
+    'Hottubing',
+    'Sushi',
+    'Dancing',
+    'Pina Coladas',
+    'Getting Caught in the Rain',
+    'Sun'
   ];
   static const List<String> possiblePronouns = [
     'He/Him',

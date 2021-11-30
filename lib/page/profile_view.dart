@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ratr_dating/model/user.dart';
 import 'package:ratr_dating/page/profile_info_big_card.dart';
 import 'package:ratr_dating/page/profile_info_rating_card.dart';
+import 'package:ratr_dating/page/profile_info_tag_card.dart';
 import 'package:ratr_dating/styleguide/colors.dart';
 import 'package:ratr_dating/styleguide/palette.dart';
 
@@ -71,11 +72,17 @@ class _ProfileViewState extends State<ProfileView> {
                           ),
                           TableRow(children: [
                             ProfileInfoRatingCard(
-                                ratingType1: 'Conversation',
-                                ratingType2: 'Respect',
-                                ratingType3: 'Humor',
-                                ratingData: widget.user.ratings),
-                          ])
+                              ratingType1: 'Conversation',
+                              ratingType2: 'Respect',
+                              ratingType3: 'Humor',
+                              ratingData: widget.user.ratings,
+                            ),
+                          ]),
+                          TableRow(
+                            children: [
+                              ProfileInfoTagCard(userTags: widget.user.userTags)
+                            ],
+                          ),
                         ],
                       ),
                     ),

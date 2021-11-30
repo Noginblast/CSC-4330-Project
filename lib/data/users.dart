@@ -76,7 +76,14 @@ RatingData _PFRatings() {
 
 UserTags _PFTags() {
   var pfTags = UserTags(userID: '4');
+  List<String> tags = [];
+  tags.add('Pina Coladas');
+  tags.add('Getting Caught in the Rain');
+
   pfTags.setupNewTags();
+  for (var tag in tags) {
+    pfTags.tags.add(tag);
+  }
   return pfTags;
 }
 
@@ -96,7 +103,15 @@ RatingData _SWRatings() {
 
 UserTags _SWTags() {
   var swTags = UserTags(userID: '3');
+  List<String> tags = [];
+  tags.add('Pets');
+  tags.add('Dancing');
+  tags.add('Cleaning');
+
   swTags.setupNewTags();
+  for (var tag in tags) {
+    swTags.tags.add(tag);
+  }
   return swTags;
 }
 
@@ -120,7 +135,16 @@ RatingData _CRatings() {
 
 UserTags _CTags() {
   var cTags = UserTags(userID: '2');
+  List<String> tags = [];
+  tags.add('Sushi');
+  tags.add('Hottubing');
+  tags.add('Cooking');
+  tags.add('Cleaning');
+
   cTags.setupNewTags();
+  for (var tag in tags) {
+    cTags.tags.add(tag);
+  }
   return cTags;
 }
 
