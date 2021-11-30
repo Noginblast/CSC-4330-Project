@@ -19,9 +19,9 @@ class _EditPageState extends State<EditPage> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
-        backgroundColor: Palette.kToDark,
+        backgroundColor: Palette.kToLight,
         appBar: AppBar(
-          backgroundColor: Palette.kToLight,
+          backgroundColor: Palette.kToDark,
           title: const Text(
             'Profile Settings',
           ),

@@ -19,27 +19,27 @@ class _ChatScreenState extends State<ChatScreen> {
     final Container msg = Container(
       margin: isMe
           ? const EdgeInsets.only(
-        top: 8.0,
-        bottom: 8.0,
-        left: 80.0,
-      )
+              top: 8.0,
+              bottom: 8.0,
+              left: 80.0,
+            )
           : const EdgeInsets.only(
-        top: 8.0,
-        bottom: 8.0,
-      ),
+              top: 8.0,
+              bottom: 8.0,
+            ),
       padding: const EdgeInsets.symmetric(horizontal: 25.0, vertical: 15.0),
       width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
         color: isMe ? Theme.of(context).primaryColor : const Color(0xFFFFEFEE),
         borderRadius: isMe
             ? const BorderRadius.only(
-          topLeft: Radius.circular(15.0),
-          bottomLeft: Radius.circular(15.0),
-        )
+                topLeft: Radius.circular(15.0),
+                bottomLeft: Radius.circular(15.0),
+              )
             : const BorderRadius.only(
-          topRight: Radius.circular(15.0),
-          bottomRight: Radius.circular(15.0),
-        ),
+                topRight: Radius.circular(15.0),
+                bottomRight: Radius.circular(15.0),
+              ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -135,7 +135,9 @@ class _ChatScreenState extends State<ChatScreen> {
             icon: const Icon(Icons.more_horiz),
             iconSize: 30.0,
             color: Colors.white,
-            onPressed: () { _navigateToRatingScreen(context, widget.user);},
+            onPressed: () {
+              _navigateToRatingScreen(context, widget.user);
+            },
           ),
         ],
       ),
@@ -146,7 +148,8 @@ class _ChatScreenState extends State<ChatScreen> {
             Expanded(
               child: Container(
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  // color: Colors.white,
+                  color: Palette.kToLight,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(30.0),
                     topRight: Radius.circular(30.0),

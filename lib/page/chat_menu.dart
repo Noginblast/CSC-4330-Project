@@ -16,12 +16,12 @@ class ChatMenu extends StatelessWidget {
       // backgroundColor: Palette.kToDark[50],
       backgroundColor: Palette.kToLight,
       appBar: AppBar(
-        backgroundColor: primaryColor,
+        backgroundColor: Palette.kToDark,
         title: const Text('Chat Menu'),
         automaticallyImplyLeading: false,
       ),
       body: Container(
-        color: Palette.kToDark,
+        color: Palette.kToLight,
         child: _buildContent(context),
       ),
       bottomNavigationBar: BottomButtonsWidget(),

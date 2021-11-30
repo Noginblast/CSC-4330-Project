@@ -24,13 +24,13 @@ class _ProfileViewState extends State<ProfileView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Palette.kToLight,
+        backgroundColor: Palette.kToDark,
       ),
       body: SingleChildScrollView(
         child: Stack(
           children: <Widget>[
             Container(
-              color: secondaryColor,
+              color: Palette.kToLight,
               height: 1300,
               child: Column(
                 children: <Widget>[
@@ -38,15 +38,15 @@ class _ProfileViewState extends State<ProfileView> {
                     flex: 45,
                     child: Stack(
                       children: <Widget>[
-                       Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
-                            image: AssetImage(widget.user.imgUrl),
-                            fit: BoxFit.fill,
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            image: DecorationImage(
+                              image: AssetImage(widget.user.imgUrl),
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                        ),
-                       )
+                        )
                       ],
                     ),
                   ),
@@ -54,7 +54,7 @@ class _ProfileViewState extends State<ProfileView> {
                     flex: 85,
                     child: Container(
                       // color: Palette.kToDark[300],
-                      color: Palette.kToDark,
+                      color: Palette.kToLight,
                       child: Table(
                         children: [
                           TableRow(
@@ -64,7 +64,7 @@ class _ProfileViewState extends State<ProfileView> {
                                 secondText: widget.user.bio,
                                 icon: const Icon(
                                   Icons.description,
-                                  color: primaryColor,
+                                  color: Palette.kToLight,
                                 ),
                               ),
                             ],
