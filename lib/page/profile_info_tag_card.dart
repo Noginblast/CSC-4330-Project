@@ -19,18 +19,23 @@ class ProfileInfoTagCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: Padding(
-          padding: const EdgeInsets.only(
-            left: 16.0,
-            top: 16,
-            bottom: 24,
-            right: 16,
-          ),
-          child: Column(
-            children: <Widget>[
-              TagDisplay(tagList: userTags.tags),
-              TagDisplay(tagList: userTags.tags),
-            ],
-          )),
+        padding: const EdgeInsets.only(
+          left: 16.0,
+          top: 16,
+          bottom: 24,
+          right: 16,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Interests'),
+            const SizedBox(
+              height: 10,
+            ),
+            TagDisplay(tagList: userTags.tags),
+          ],
+        ),
+      ),
     );
   }
 }

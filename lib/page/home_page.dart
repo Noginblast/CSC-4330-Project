@@ -47,17 +47,16 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
                   child: Column(
                     children: <Widget>[
                       Expanded(
-                        flex: 4,
-                        child: Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            image: DecorationImage(
-                              image: AssetImage(loggedInUser.imgUrl),
-                              fit: BoxFit.cover,
+                          flex: 4,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              image: DecorationImage(
+                                image: AssetImage(loggedInUser.imgUrl),
+                                fit: BoxFit.cover,
+                              ),
                             ),
-                          ),
-                        )
-                      ),
+                          )),
                       Expanded(
                         flex: 9,
                         child: Container(
@@ -127,10 +126,14 @@ class _HomePageState extends State<HomePage> implements PreferredSizeWidget {
   //     );
 
   void tempFunc() {
-    Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => EditPage(
-              user: loggedInUser,
-            )));
+    Navigator.of(context)
+        .push(MaterialPageRoute(
+            builder: (context) => EditPage(
+                  user: loggedInUser,
+                )))
+        .then((_) {
+      setState(() {});
+    });
   }
 
   @override

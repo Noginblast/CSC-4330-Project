@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 class UserTags {
   final String userID;
@@ -54,14 +55,27 @@ class TagDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-      elevation: 5,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
-      ),
-      color: Colors.lightBlue,
-      child: Text('Interests'),
+    // return Card(
+    //   margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+    //   elevation: 5,
+    //   shape: RoundedRectangleBorder(
+    //     borderRadius: BorderRadius.circular(20),
+    //   ),
+    //   color: Colors.lightBlue,
+    //   child: Text('Interests'),
+    // );
+    List<Widget> tagListBoxes = [];
+    for (var tag in tagList) {
+      tagListBoxes.add(Chip(
+        label: Text(tag),
+        backgroundColor: Palette.kToDark,
+      ));
+    }
+    return Wrap(
+      direction: Axis.horizontal,
+      spacing: 10,
+      runSpacing: 10,
+      children: tagListBoxes,
     );
   }
 }
