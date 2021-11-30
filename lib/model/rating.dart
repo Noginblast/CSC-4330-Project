@@ -4,6 +4,7 @@ import 'package:material_design_icons_flutter/material_design_icons_flutter.dart
 import 'package:ratr_dating/data/users.dart';
 import 'package:ratr_dating/model/message_model.dart';
 import 'package:ratr_dating/model/user.dart';
+import 'package:ratr_dating/styleguide/palette.dart';
 
 class RatingPage extends StatefulWidget {
   User user;
@@ -21,6 +22,7 @@ class _RatingPageState extends State<RatingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Palette.kToLight,
       appBar: AppBar(
         title: const Text('Ratr Dating'),
       ),
